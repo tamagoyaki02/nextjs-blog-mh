@@ -1,4 +1,5 @@
 // cannnot use babel-plugin-impoprt-glob-array and webpack alias together
+//import-glob-arrayでposts/配下のmdxファイルを一括インポート
 import {
   frontMatter as fms,
   _importMeta as metadatas,

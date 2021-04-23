@@ -1,4 +1,3 @@
-
 interface FrontMatter {
   title: string;
   date: string;

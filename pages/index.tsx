@@ -1,7 +1,7 @@
 import React from "react";
 import { GetStaticProps } from "next";
-import Link from "next/link";
 import mdxUtil from "@/lib/mdx-util";
+import OPostList, { IPostItem } from "@/components/organisms/OPostList"
 
 interface Props {
   posts: {
@@ -11,33 +11,20 @@ interface Props {
   }[];
 }
 
-const Index: React.FC<Props> = (props: Props) => {
+const PostList: React.FC<Props> = (props: Props) => {
   const { posts } = props;
   return (
     <>
-      <h1>Sample Blog App</h1>
-      <ul>
-        {posts.map((post) => {
-          return (
-            <li key={post.title}>
-              <span>{post.date}</span>
-              &nbsp;
-              <Link href="/blog/[...id]" as={`/blog/${post.resourceId}`}>
-                <a>{post.title}</a>
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
+      <OPostList posts={posts} />
     </>
-  );
+  )
 };
 
 export const getStaticProps: GetStaticProps = async () => {
   const posts = await mdxUtil.getPosts();
   return {
     props: {
-      posts: posts.map((post) => {
+      posts: posts.map((post): IPostItem => {
         return {
           resourceId: post.resourceId,
           date: post.frontMatter.date,
@@ -48,4 +35,4 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-export default Index;
+export default PostList;
