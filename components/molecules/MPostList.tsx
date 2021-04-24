@@ -11,11 +11,11 @@ const MPostList: React.FC<IPostItem> = (post: IPostItem) => {
   const { resourceId, date, title } = post;
   return (
     <Link href={"/blog/[...id]"} as={`/blog/${resourceId}`}>
-      <div>
-        <p>{date}</p>
+      <div className="p-4 cursor-pointer hover:bg-custom-night1">
+        <p className="pb-2 text-custom-night3">{date}</p>
         <h2>{title}</h2>
-      </div>
-    </Link>
+      </div >
+    </Link >
   )
 }
 

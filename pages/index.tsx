@@ -2,6 +2,7 @@ import React from "react";
 import { GetStaticProps } from "next";
 import mdxUtil from "@/lib/mdx-util";
 import OPostList, { IPostItem } from "@/components/organisms/OPostList"
+import TIndexLayout from '@/components/templates/TIndexLayout'
 
 interface Props {
   posts: {
@@ -14,9 +15,9 @@ interface Props {
 const PostList: React.FC<Props> = (props: Props) => {
   const { posts } = props;
   return (
-    <>
+    <TIndexLayout>
       <OPostList posts={posts} />
-    </>
+    </TIndexLayout>
   )
 };
 

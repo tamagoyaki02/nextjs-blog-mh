@@ -1,0 +1,24 @@
+{
+  "url": "http://192.168.33.49:3000/",
+  "name": "hiraoku blog",
+  "copyright": "© 2021 hiraoku",
+  "pages": {
+    "blog": {
+      "title": "BLOG",
+      "description": "site制作に関する備忘録"
+    },
+    "about": {
+      "title": "ABOUT",
+      "description": "このサイトについて"
+    }
+  },
+  "author": {
+    "twitter": {
+      "id": "@effects015",
+      "url": "https://twitter.com/effects015"
+    },
+    "github": {
+      "url": "https://github.com/tamagoyaki02"
+    }
+  }
+}
