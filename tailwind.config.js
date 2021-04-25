@@ -34,7 +34,7 @@ module.exports = {
     },
     fontFamily: {
       ...fontFamily,
-      logo: ["Homemade Apple, san-sefif"],
+      logo: ["Comic Sans MS, cursive, Helvetica, Homemade Apple, san-serif"],
     },
     screens: {
       sm: "640px",
