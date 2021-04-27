@@ -14,7 +14,7 @@ interface Props {
 const OPostList: React.FC<Props> = (props: Props) => {
   const { posts } = props;
   return (
-    <ul>
+    <ul className="p-8">
       {
         posts.map((post) => (
           <li key={post.resourceId}>
