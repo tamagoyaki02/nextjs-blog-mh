@@ -1,0 +1,55 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@media (min-width: 640px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (max-width:640px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+html {
+  @apply text-custom-snow0;
+  @apply bg-custom-night0;
+}
+
+h1 {
+  @apply text-2xl;
+}
+
+h2 {
+  @apply text-xl;
+}
+
+h3 {
+  @apply text-lg;
+}
+
+h4 {
+  @apply text-base;
+}
+
+a:hover {
+  @apply cursor-pointer;
+}
+
+p+p, ul+p, pre+p, div+p {
+  @apply mt-6;
+}
+
+ul+ul, p+ul, pre+ul {
+  @apply mt-6;
+}
+
+pre+pre, p+pre, ul+pre {
+  @apply mt-2;
+}
+
+li+li {
+  @apply mt-2;
+}
