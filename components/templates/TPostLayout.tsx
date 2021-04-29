@@ -28,19 +28,28 @@ const TPostLayout: React.FC<Props> = (props: Props) => {
     h5: APostHeading.H5,
     p: AParagraph,
     blockquote: ABlockquote,
-
+    ul: AList.Ul,
+    li: AList.Li,
+    a: ALink,
+    img: AImage,
+    inlineCode: AInlineCode,
+    code: MCodeBlock,
   };
 
   return (
-    <div>
+    <div className="blog-post-content px-8">
       <MHead
-
+        title={`${frontmatter.title} | ${siteconfig.name}`}
+        description={frontmatter.description}
+        pageUrl={`${siteconfig.url}${path}`}
+        coverImageUrl={`${siteconfig.url}${frontmatter.cover}`}
+        pageType="article"
       />
-      <div>
+      <div className="bg-custom-night1 p-8 rounded-xl">
         <OPostHeader />
         <MDXProvider components={state}>{children}</MDXProvider>
       </div>
-    </div>
+    </div >
   )
 }
 
