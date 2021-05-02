@@ -2,7 +2,7 @@ import React from "react";
 import { GetStaticPaths, GetStaticProps } from "next";
 import dynamic from "next/dynamic";
 import mdxUtil from "@/lib/mdx-util";
-import TPostLayout from "@/components/template/TPostLayout";
+import TPostLayout from "@/components/templates/TPostLayout";
 
 interface Props {
   resourceId: string;

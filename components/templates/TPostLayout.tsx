@@ -13,13 +13,13 @@ import MCodeBlock from "@/components/molecules/MCodeBlock";
 import siteconfig from '@/siteconfig.json'
 
 interface Props {
-  frontmatter: FrontMatter;
+  frontMatter: FrontMatter;
   path: string;
   children: React.ReactNode;
 }
 
 const TPostLayout: React.FC<Props> = (props: Props) => {
-  const { frontmatter, path, children } = props;
+  const { frontMatter, path, children } = props;
   const state = {
     h1: APostHeading.H1,
     h2: APostHeading.H2,
@@ -39,14 +39,14 @@ const TPostLayout: React.FC<Props> = (props: Props) => {
   return (
     <div className="blog-post-content px-8">
       <MHead
-        title={`${frontmatter.title} | ${siteconfig.name}`}
-        description={frontmatter.description}
+        title={`${frontMatter.title} | ${siteconfig.name}`}
+        description={frontMatter.description}
         pageUrl={`${siteconfig.url}${path}`}
-        coverImageUrl={`${siteconfig.url}${frontmatter.cover}`}
+        coverImageUrl={`${siteconfig.url}${frontMatter.cover}`}
         pageType="article"
       />
       <div className="bg-custom-night1 p-8 rounded-xl">
-        <OPostHeader />
+        <OPostHeader frontMatter={frontMatter} />
         <MDXProvider components={state}>{children}</MDXProvider>
       </div>
     </div >

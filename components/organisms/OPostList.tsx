@@ -19,7 +19,7 @@ const OPostList: React.FC<Props> = (props: Props) => {
         posts.map((post) => (
           <li key={post.resourceId}>
             <MPost
-              resouceId={post.resourceId}
+              resourceId={post.resourceId}
               date={post.date}
               title={post.title}
             />
