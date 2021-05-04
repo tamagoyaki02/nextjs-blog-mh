@@ -1,6 +1,67 @@
 ---
-title: "3rd post"
-date: "2020-03-01"
+title: "自作ブログにかっこいいダークテーマをあてる"
+date: "2021-02-08"
+description: "自作のブログにNordというカラーテーマを適用したお話"
+cover: "/2021/02/colorpalette.png"
 ---
 
-This is my 3rd post.
+Nord というカラーテーマの世界観がいいなと思って、自作ブログに適用してみた。
+
+## 北極圏を思わせる寒色系カラーテーマ
+
+Nord は[公式ページ](https://www.nordtheme.com/)に
+"An arctic, north-bluish  color palette" と記載されている通り、
+北極の風景の美しさからインスパイアされた落ち着いた色合いの寒色系カラーテーマである。
+
+Nord では４種のカラーパレットが定義されている。
+北極圏の夜をイメージした Polar Night、吹雪をイメージした Snow Storm、
+氷塊をイメージした Frost、オーロラをイメージした Aurora。
+
+![colorpalette](/2021/02/colorpalette.png "公式ページより抜粋")
+
+上記のように複数の同系色が用意されているため、
+マウスホバー時などの通常時と少しだけ異なるスタイルも適用しやすい。
+
+またライトテーマとダークテーマの両方をサポートしているのも嬉しい。
+
+
+## ブログに適用する
+
+このブログで使っている tailwindcss は設定ファイルである `tailwind.config.js` に
+カスタムカラーを定義することができる。この仕組みを使って上記のカラーパレットを定義する。
+
+```js
+// tailwind.config.js
+module.exports = {
+  theme: {
+    custom: {
+      night0: "#2e3440",
+      night1: "#3b4252",
+      night2: "#434c5e",
+      night3: "#4c566a",
+      snow0: "#d8dee9",
+      snow1: "#e5e9f0",
+      snow2: "#eceff4",
+      frost0: "#8fbcbb",
+      frost1: "#88c0d0",
+      frost2: "#81a1c1",
+      frost3: "#5e81ac",
+      aurora0: "#bf616a",
+      aurora1: "#d08770",
+      aurora2: "#ebcb8b",
+      aurora3: "#a3be8c",
+      aurora4: "#b48ead",
+    }
+  }
+}
+```
+
+こうしてカラーパレットを定義してあげると tailwindcss の仕組みの上でカスタムカラーを利用可能になる。
+例えば `text-custom-night0` というクラス名を HTML タグに定義すればテキストの色が `#2e3440`になる。あとは Nord の公式ホームページなどの配色を見ながら色を設定していけばよい。
+
+## 感想
+
+旧デザインと比較して色に統一感が生まれた気がする。
+カラーパレットの偉大さを感じる。
+
+![blog-old](/2021/02/blog-old.png "旧デザイン")

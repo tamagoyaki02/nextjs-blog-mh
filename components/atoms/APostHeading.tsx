@@ -12,43 +12,42 @@ interface Props {
   children: React.ReactNode;
 }
 
-const H1: React.FC<Props> = (props: Porps) => {
+const H1: React.FC<Props> = (props: Props) => {
   const { children } = props;
   return (
     <h1 className="py-12 text-custom-frost1 font-bold">{children}</h1>
   )
 }
-const H2: React.FC<Props> = (props: Porps) => {
+const H2: React.FC<Props> = (props: Props) => {
   const { children } = props;
   return (
     <h2 className="pt-12 text-custom-frost1 pb-4 font-bold">{children}</h2>
   )
 }
-const H3: React.FC<Props> = (props: Porps) => {
+const H3: React.FC<Props> = (props: Props) => {
   const { children } = props;
   return (
     <h3 className="pt-12 text-custom-frost1 font-bold">{children}</h3>
   )
 }
-const H4: React.FC<Props> = (props: Porps) => {
+const H4: React.FC<Props> = (props: Props) => {
   const { children } = props;
   return (
     <h4 className="py-8 text-custom-frost1 font-bold">{children}</h4>
   )
 }
-const H5: React.FC<Props> = (props: Porps) => {
+const H5: React.FC<Props> = (props: Props) => {
   const { children } = props;
   return (
     <h5 className="py-8 text-custom-frost1 font-bold">{children}</h5>
   )
 }
 
-const ABlogHeading: React.FC<Props> & ABlogHeading = () => {
-  ABlogHeading.H1 = H1;
-  ABlogHeading.H2 = H2;
-  ABlogHeading.H3 = H3;
-  ABlogHeading.H4 = H4;
-  ABlogHeading.H5 = H5;
-}
+const ABlogHeading: React.FC<Props> & ABlogHeading = () => null;
+ABlogHeading.H1 = H1;
+ABlogHeading.H2 = H2;
+ABlogHeading.H3 = H3;
+ABlogHeading.H4 = H4;
+ABlogHeading.H5 = H5;
 
 export default ABlogHeading;
