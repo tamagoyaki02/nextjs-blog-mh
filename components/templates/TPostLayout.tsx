@@ -37,7 +37,7 @@ const TPostLayout: React.FC<Props> = (props: Props) => {
   };
 
   return (
-    <div className="blog-post-content px-8">
+    <div className="blog-post-content pt-12 px-8">
       <MHead
         title={`${frontMatter.title} | ${siteconfig.name}`}
         description={frontMatter.description}
