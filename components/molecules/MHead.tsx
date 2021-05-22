@@ -1,6 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
-import siteconfig from '@/siteconfig'
+import siteconfig from '@/siteconfig.json'
 
 interface Props {
   title: string;

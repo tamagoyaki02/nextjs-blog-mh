@@ -2,7 +2,7 @@ import React from "react";
 import { GetStaticPaths, GetStaticProps } from "next";
 import dynamic from "next/dynamic";
 import mdxUtil from "@/lib/mdx-util";
-import BlogLayout from "@/components/BlogLayout";
+import TPostLayout from "@/components/templates/TPostLayout";
 
 interface Props {
   resourceId: string;
@@ -13,9 +13,9 @@ const Post: React.FC<Props> = (props: Props) => {
   const { resourceId, frontMatter } = props;
   const MDX = dynamic(() => import(`@/posts/${resourceId}.mdx`));
   return (
-    <BlogLayout frontMatter={frontMatter}>
+    <TPostLayout frontMatter={frontMatter} path={`/blog/${resourceId}`}>
       <MDX />
-    </BlogLayout>
+    </TPostLayout>
   );
 };
 

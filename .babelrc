@@ -3,6 +3,7 @@
     "next/babel"
   ],
   "plugins": [
-    "import-glob-array"
+    "import-glob-array",
+    "babel-plugin-styled-components"
   ]
 }
