@@ -3,7 +3,7 @@
 import {
   frontMatter as fms,
   _importMeta as metadatas,
-} from "../posts/*/*/*.mdx";
+} from "../posts/**/*/*.mdx";
 
 const MDX_FILE_ROOT = "/posts/";
 
